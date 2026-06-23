@@ -1,84 +1,142 @@
-# Dependencies
+# AI Knowledge Hub
 
-node_modules/
-**/node_modules/
+AI Knowledge Hub is a full-stack GenAI + RAG based document intelligence platform.
 
-# Build outputs
+The goal of this project is to let users upload documents, process them, and ask questions from their private knowledge base using AI.
 
-dist/
-build/
-.next/
-out/
-coverage/
+This project is built as a portfolio-level production-style application using React, Node.js, Express, TypeScript, PostgreSQL, Prisma, MongoDB, Redis, Docker, and later Kubernetes.
 
-# Environment files
+## Tech Stack
 
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+### Frontend
 
-# Keep example env files
+* React.js
+* TypeScript
+* Redux Toolkit
+* React Router
+* Tailwind CSS
+* Axios
+* Vite
 
-!.env.example
+### Backend
 
-# Logs
+* Node.js
+* Express.js
+* TypeScript
+* MVC Architecture
+* PostgreSQL
+* Prisma ORM
+* MongoDB
+* Redis
+* JWT Authentication
 
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+### DevOps
 
-# OS files
+* Docker
+* Docker Compose
+* Kubernetes later
 
-.DS_Store
-Thumbs.db
+## Project Structure
 
-# Editor files
+```txt
+ai-knowledge-hub/
+│
+├── backend/
+│   ├── src/
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── .env
+│   └── .env.example
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.ts
+│   └── tsconfig.json
+│
+├── docker/
+│
+├── README.md
+└── .gitignore
+```
 
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-.idea/
+## Main Features Planned
 
-# TypeScript
+* User authentication
+* Role based access
+* Document upload
+* PDF/text extraction
+* Document chunking
+* Embedding generation
+* Vector search
+* RAG based AI chatbot
+* Chat history
+* Admin dashboard
+* Redis queue for background processing
+* Dockerized services
+* Kubernetes deployment setup
 
-*.tsbuildinfo
+## Backend Setup
 
-# Vite
+```bash
+cd backend
+npm install
+```
 
-.vite/
+Create `.env` file inside `backend/`:
 
-# Cache
+```env
+PORT=5000
+NODE_ENV=development
+DATABASE_URL="postgresql://username:password@localhost:5432/ai_knowledge_hub"
+JWT_SECRET="your_jwt_secret"
+```
 
-.cache/
-.parcel-cache/
-eslintcache
-.eslintcache
+Run backend:
 
-# Prisma
+```bash
+npm run dev
+```
 
-backend/prisma/dev.db
-backend/prisma/dev.db-journal
+## Frontend Setup
 
-# Docker
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-docker-data/
+## Development Flow
 
-# Temporary files
+Frontend runs on:
 
-tmp/
-temp/
+```txt
+http://localhost:5173
+```
 
-# Uploads
+Backend runs on:
 
-uploads/
-backend/uploads/
+```txt
+http://localhost:5000
+```
 
-# Production generated files
+## Current Status
 
-frontend/dist/
-backend/dist/
+Project setup phase.
+
+Completed:
+
+* Monorepo folder structure
+* Backend base setup
+* Frontend base setup
+* TypeScript setup
+* Tailwind setup
+
+Next steps:
+
+* Backend Express server setup
+* API route structure
+* Frontend routing
+* Auth module
+* PostgreSQL + Prisma setup
